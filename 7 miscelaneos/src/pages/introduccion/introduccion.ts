@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { AjustesService } from '../../providers/ajustes/ajustes';
 
 
 @IonicPage()
@@ -28,10 +29,12 @@ export class IntroduccionPage {
     }
   ];
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private ajustes: AjustesService) {
   }
 
   saltar_tutorial() {
+    this.ajustes.ajustes.mostrar_tutorial = false;
+    this.ajustes.guardarStorage();
     this.navCtrl.setRoot(HomePage);
   }
 
