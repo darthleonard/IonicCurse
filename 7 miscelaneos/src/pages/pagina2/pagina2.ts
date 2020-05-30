@@ -11,8 +11,7 @@ export class Pagina2Page {
     public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Pagina2Page');
+  irPagina3() {
+    this.navCtrl.push("mi-pagina3");
   }
-
 }
