@@ -28,7 +28,6 @@ export class IntroduccionPage {
     }
   ];
   
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
